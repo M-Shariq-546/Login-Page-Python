@@ -7,14 +7,7 @@ from tkinter import ttk
 def Login(fname , mname , lname , email, phone , e_password):
     
     con = s3.connect('Login.db' , timeout=10)
-    cur = con.cursor()  
-
-   # fname = fname_entry.get()
-   #mname = mname_entry.get()
-   # lname = lname_entry.get()
-   # email = email_entry.get()
-   # phone = phone_entry.get()
-   # e_password = e_password_entry.get()
+    cur = con.cursor() 
     
     table = '''CREATE TABLE IF NOT EXISTS logins
         (id integer primary key AUTOINCREMENT  ,
